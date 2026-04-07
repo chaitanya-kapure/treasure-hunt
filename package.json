@@ -1,0 +1,11 @@
+{
+  "name": "treasure-hunt-premium",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {"dev": "next dev"},
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  }
+}
