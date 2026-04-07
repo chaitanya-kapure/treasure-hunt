@@ -12,25 +12,25 @@ export default function Page() {
   const router = useRouter();
 
   const answers = {
-    A1: "42",
-    A2: "25",
-    A3: "25",
-    A4: "81",
-    A5: "4",
-    A6: "15",
-    A7: "15",
-    A8: "33"
+    A1: "0.2",
+    A2: "0.2",
+    A3: "0.2",
+    A4: "0.2",
+    A5: "0.2",
+    A6: "0.2",
+    A7: "0.2",
+    A8: "0.2"
   };
 
   const riddles = {
-    A1: "Go where books live in silence.",
-    A2: "Find the place where students eat.",
-    A3: "Look for the biggest hall in college.",
-    A4: "Find where water flows.",
-    A5: "Look where events happen.",
-    A6: "Find the entry gate.",
-    A7: "Go to the sports area.",
-    A8: "Find the admin office."
+    A1: "Kya Veeru Paaji apni premika ko 'kutto ko saamne nachne denge??' Jaanane ke liye iss 'point' pe aao!",
+    A2: "Naam se chai ka level high lagta hai…\nReality thodi mid hai 😭\nPar peeche jo bada tank dikhta hai — wahi asli hint hai.”",
+    A3: "MLSC ka phele interaction yahi hua tha. (Interaction kahe ya Interrogation?😉)",
+    A4: "Koi chota celebration ho ya life ka naya chapter, \nyaha aane ke baad muh pe naya flavour,\n kapdo pe rang aur dher sari memories banti hai",
+    A5: "Sarkari khaana hai janab,\n der se hi aayega!🤗",
+    A6: "No stadium, no sunlight —\nstill, the rallies never stop.",
+    A7: "Tempted to enter the big hall?\nResist. Your location is right in front it.",
+    A8: "Before the pressure of the final test,\nthe last refuge for minds seeking rest.\n🐘🛐"
   };
 
   const playSound = (path) => {
@@ -63,7 +63,7 @@ export default function Page() {
         {isCorrect && (
           <>
             <h3>🎯 Next Location</h3>
-            <p>{riddles[id]}</p>
+            <p style={{ whiteSpace: "pre-line" }}>{riddles[id]}</p>
             <button onClick={() => router.push(`/team/${id}/round2`)}>
               Next
             </button>

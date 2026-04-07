@@ -18,29 +18,29 @@ export default function Page() {
   }, []);
 
   const answers = {
-    A1: "shadow",
-    A2: "echo",
-    A3: "time",
-    A4: "fire",
-    A5: "water",
-    A6: "wind",
-    A7: "light",
-    A8: "dark"
+    A1: "0.5",
+    A2: "0.5",
+    A3: "0.5",
+    A4: "0.5",
+    A5: "0.5",
+    A6: "0.5",
+    A7: "0.5",
+    A8: "0.5"
   };
 
   const riddles = {
-    A1: "Go to the place where computers are used.",
-    A2: "Find where you relax between lectures.",
-    A3: "Look for the parking area.",
-    A4: "Go near the main office.",
-    A5: "Find the lab area.",
-    A6: "Look near the canteen.",
+    A1: "A gate for appearance, not for transit.\n Its original title belies its inactive role.\n🚂",
+    A2: "A permanent fixture, more often seen than driven.\n The Civil/Mechanical Department's stationary mascot.\n🚜",
+    A3: "A place of strict conduct; no rest is permitted.\n The readings are noted even before the experiment is finished.☠️",
+    A4: "Naam mai chota par kaam bada;\n Khaas aapke liye LITERAL Hindi anuvaad: Choti Kendriya Sanganak suvidha",
+    A5: "Oo gan kal aana",
+    A6: "Once meant to roar down tracks,\nnow silent at the gates —\na journey that never moves,\nat the place where all do.",
     A7: "Find the stairs.",
-    A8: "Go to the library."
+    A8: "Shuruaat mein hi haath gande karaaye,\nMehnat karwaaye…\n par kuch haath na aaye."
   };
 
   const playSound = (path) => {
-    new Audio(path).play().catch(() => {});
+    new Audio(path).play().catch(() => { });
   };
 
   const submit = () => {
