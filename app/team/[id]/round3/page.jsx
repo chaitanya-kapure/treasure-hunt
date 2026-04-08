@@ -13,14 +13,14 @@ export default function Page() {
     }
   }, []);
    const answers = {
-    A1: "50J",
-    A2: "50J",
-    A3: "50J",
-    A4: "50J",
-    A5: "50J",
-    A6: "50J",
-    A7: "50J",
-    A8: "50J"};
+    A1: "50j",
+    A2: "50j",
+    A3: "50j",
+    A4: "50j",
+    A5: "50j",
+    A6: "50j",
+    A7: "50j",
+    A8: "50j"};
   const finalRiddle = "Where silence speaks the loudest,\nclimb towards the doors of knowledge —\nbut don’t enter.\nNot ahead, not behind…\nlook where the unnoticed waits in colour.";
   const playSound = (path) => {
     new Audio(path).play().catch(() => {});
