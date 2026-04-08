@@ -21,7 +21,7 @@ export default function Page() {
   };
 
   const riddles = {
-    A1: "Kya Veeru Paaji apni premika ko 'kutto ke samne nachne denge?' Janane ke liye is point pe aao!",
+    A1: "Where cheers get loud\nand sports take over —\nenter through the gate\nwhere the real play begins.",
     A2: "Naam se chai ka level high lagta hai...\nReality thodi mid hai.\nPar peeche jo bada tank dikhta hai, wahi asli hint hai.",
     A3: "MLSC ka pehla interaction yahin hua tha. (Interaction kahe ya Interrogation?)",
     A4: "Koi chhota celebration ho ya life ka naya chapter,\nyahan aane ke baad muh pe naya flavour,\nkapdon pe rang aur dher sari memories banti hain.",

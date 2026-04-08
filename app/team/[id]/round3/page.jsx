@@ -17,14 +17,14 @@ export default function Page() {
   }, [id, router]);
 
   const answers = {
-    A1: "50j",
-    A2: "50j",
-    A3: "50j",
-    A4: "50j",
-    A5: "50j",
-    A6: "50j",
-    A7: "50j",
-    A8: "50j",
+    A1: "18J",
+    A2: "18J",
+    A3: "18J",
+    A4: "18J",
+    A5: "18J",
+    A6: "18J",
+    A7: "18J",
+    A8: "18J",
   };
 
   const finalRiddle =
