@@ -36,7 +36,8 @@ export default function Page() {
 
   const submit = () => {
     const normalizedInput = input.trim().toLowerCase();
-    if (normalizedInput === answers[id]) {
+    const normalizedAnswer = String(answers[id] || "").trim().toLowerCase();
+    if (normalizedInput === normalizedAnswer) {
       playSound("/sounds/tunetank-winner-awards-logo-484333.mp3");
       setIsCorrect(true);
     } else {
