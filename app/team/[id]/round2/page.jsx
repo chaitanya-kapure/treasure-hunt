@@ -29,9 +29,9 @@ export default function Page() {
 
   const riddles = {
     A1: "A gate for appearance, not for transit. Its original title belies its inactive role.",
-    A2: "A permanent fixture, more often seen than driven. The Civil/Mechanical Department's stationary mascot.",
+    A2: "A permanent fixture, more often seen than driven. The Civil/Mechanical Department's stationary mascot.\n🚜",
     A3: "A place of strict conduct; no rest is permitted. The readings are noted even before the experiment is finished.",
-    A4: "Naam mein chhota par kaam bada; khas aapke liye literal Hindi anuvaad: Choti Kendriya Sanganak Suvidha.",
+    A4: "Naam mein chhota par kaam bada;\n Khas aapke liye literal Hindi anuvaad: Choti Kendriya Sanganak Suvidha.",
     A5: "Oo gan, kal aana.",
     A6: "Once meant to roar down tracks, now silent at the gates. A journey that never moves, at the place where all do.",
     A7: "Not the main one, but where most stories are made. Assignments can wait, chai cannot. Step away from the front and you will find it where the college ends.",
