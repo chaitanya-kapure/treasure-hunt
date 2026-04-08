@@ -3,7 +3,6 @@ import { useRouter, useParams } from "next/navigation";
 
 export default function Page() {
   const router = useRouter();
-
   const params = useParams();
   let id = String(params?.id || "").trim().toUpperCase();
 
@@ -15,13 +14,8 @@ export default function Page() {
     <div className="center">
       <div className="card">
         <h2>Nice!</h2>
-        <p>Go to Venue: Library Entrance</p>
-
-        {/* <img src="https://i.imgflip.com/1bij.jpg" width="200"/> */}
-
-        <button onClick={() => router.push(`/team/${id}/round3`)}>
-          Final Round
-        </button>
+        <p>Go to venue: Library Entrance</p>
+        <button onClick={() => router.push(`/team/${id}/round3`)}>Final Round</button>
       </div>
     </div>
   );

@@ -5,17 +5,16 @@ import { useRouter, useParams } from "next/navigation";
 export default function Page() {
   const params = useParams();
   const id = String(params?.id || "").trim().toUpperCase();
-
   const [input, setInput] = useState("");
   const [isCorrect, setIsCorrect] = useState(false);
-
   const router = useRouter();
 
   useEffect(() => {
+    if (!id) return;
     if (!localStorage.getItem(id + "r1")) {
       router.push(`/team/${id}/round1`);
     }
-  }, []);
+  }, [id, router]);
 
   const answers = {
     A1: "0.5",
@@ -25,26 +24,27 @@ export default function Page() {
     A5: "0.5",
     A6: "0.5",
     A7: "0.5",
-    A8: "0.5"
+    A8: "0.5",
   };
 
   const riddles = {
-    A1: "A gate for appearance, not for transit.\n Its original title belies its inactive role.\n🚂",
-    A2: "A permanent fixture, more often seen than driven.\n The Civil/Mechanical Department's stationary mascot.\n🚜",
-    A3: "A place of strict conduct; no rest is permitted.\n The readings are noted even before the experiment is finished.☠️",
-    A4: "Naam mai chota par kaam bada;\n Khaas aapke liye LITERAL Hindi anuvaad: Choti Kendriya Sanganak suvidha",
-    A5: "Oo gan kal aana",
-    A6: "Once meant to roar down tracks,\nnow silent at the gates —\na journey that never moves,\nat the place where all do.",
-    A7: "Not the main one,\nbut where most stories are made —\nassignments can wait, chai can’t.\nStep away from the front,\nyou’ll find it where the college ends.",
-    A8: "Shuruaat mein hi haath gande karaaye,\nMehnat karwaaye…\n par kuch haath na aaye."
+    A1: "A gate for appearance, not for transit. Its original title belies its inactive role.",
+    A2: "A permanent fixture, more often seen than driven. The Civil/Mechanical Department's stationary mascot.",
+    A3: "A place of strict conduct; no rest is permitted. The readings are noted even before the experiment is finished.",
+    A4: "Naam mein chhota par kaam bada; khas aapke liye literal Hindi anuvaad: Choti Kendriya Sanganak Suvidha.",
+    A5: "Oo gan, kal aana.",
+    A6: "Once meant to roar down tracks, now silent at the gates. A journey that never moves, at the place where all do.",
+    A7: "Not the main one, but where most stories are made. Assignments can wait, chai cannot. Step away from the front and you will find it where the college ends.",
+    A8: "Shuruaat mein hi haath gande karaye, mehnat karvaye, par kuchh haath na aaye.",
   };
 
   const playSound = (path) => {
-    new Audio(path).play().catch(() => { });
+    new Audio(path).play().catch(() => {});
   };
 
   const submit = () => {
-    if (input.toLowerCase() === answers[id]) {
+    const normalizedInput = input.trim().toLowerCase();
+    if (normalizedInput === answers[id]) {
       playSound("/sounds/tunetank-winner-awards-logo-484333.mp3");
       setIsCorrect(true);
       localStorage.setItem(id + "r2", "1");
@@ -52,6 +52,18 @@ export default function Page() {
       playSound("/sounds/freesound_community-boo-6377.mp3");
     }
   };
+
+  if (!answers[id]) {
+    return (
+      <div className="center">
+        <div className="card">
+          <h2>Invalid Team</h2>
+          <p>Please go back and select a valid team ID.</p>
+          <button onClick={() => router.push("/")}>Back to Home</button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="center">
@@ -61,18 +73,16 @@ export default function Page() {
         {!isCorrect && (
           <>
             <p>Enter your answer:</p>
-            <input onChange={(e) => setInput(e.target.value)} />
+            <input value={input} onChange={(e) => setInput(e.target.value)} />
             <button onClick={submit}>Submit</button>
           </>
         )}
 
         {isCorrect && (
           <>
-            <h3>🎯 Next Location</h3>
-            <p>{riddles[id]}</p>
-            <button onClick={() => router.push(`/team/${id}/round3`)}>
-              Next
-            </button>
+            <h3>Next Location</h3>
+            <p style={{ whiteSpace: "pre-line" }}>{riddles[id]}</p>
+            <button onClick={() => router.push(`/team/${id}/round3`)}>Next</button>
           </>
         )}
       </div>

@@ -1,22 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
-  font-family: sans-serif;
-  color: white;
-
-
-  background-image: url('/bg.jpg');
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  background-image: url("/bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
   z-index: -1;
 }
 
@@ -24,28 +29,53 @@ body::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100dvh;
+  padding: 16px;
 }
 
 .card {
-  background: rgba(17, 24, 39, 0.85);
-  backdrop-filter: blur(10px);
-  padding: 30px;
-  border-radius: 20px;
-  width: 350px;
+  background: rgba(17, 24, 39, 0.88);
+  backdrop-filter: blur(8px);
+  width: min(100%, 420px);
+  padding: 24px;
+  border-radius: 16px;
   text-align: center;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
 button {
-  padding: 10px 20px;
+  width: 100%;
+  padding: 12px 16px;
   margin-top: 10px;
-  border: none;
+  border: 0;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-top: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+  .center {
+    padding: 12px;
+    align-items: stretch;
+  }
+
+  .card {
+    margin: auto 0;
+    padding: 18px;
+  }
 }
