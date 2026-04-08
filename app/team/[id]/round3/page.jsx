@@ -13,15 +13,15 @@ export default function Page() {
     }
   }, []);
    const answers = {
-    A1: "treasure",
-    A2: "treasure",
-    A3: "treasure",
-    A4: "treasure",
-    A5: "treasure",
-    A6: "treasure",
-    A7: "treasure",
-    A8: "treasure"};
-  const finalRiddle = "🏆 The treasure lies where your journey began.";
+    A1: "50J",
+    A2: "50J",
+    A3: "50J",
+    A4: "50J",
+    A5: "50J",
+    A6: "50J",
+    A7: "50J",
+    A8: "50J"};
+  const finalRiddle = "Where silence speaks the loudest,\nclimb towards the doors of knowledge —\nbut don’t enter.\nNot ahead, not behind…\nlook where the unnoticed waits in colour.";
   const playSound = (path) => {
     new Audio(path).play().catch(() => {});
   };

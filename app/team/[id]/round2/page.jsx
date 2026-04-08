@@ -35,7 +35,7 @@ export default function Page() {
     A4: "Naam mai chota par kaam bada;\n Khaas aapke liye LITERAL Hindi anuvaad: Choti Kendriya Sanganak suvidha",
     A5: "Oo gan kal aana",
     A6: "Once meant to roar down tracks,\nnow silent at the gates —\na journey that never moves,\nat the place where all do.",
-    A7: "Find the stairs.",
+    A7: "Not the main one,\nbut where most stories are made —\nassignments can wait, chai can’t.\nStep away from the front,\nyou’ll find it where the college ends.",
     A8: "Shuruaat mein hi haath gande karaaye,\nMehnat karwaaye…\n par kuch haath na aaye."
   };
 
